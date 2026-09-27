@@ -47,9 +47,6 @@
 
   /* Hero */
   .hero{padding-top:120px; padding-bottom:72px}
-  .tc{color:var(--teal); font-size:0.85rem; letter-spacing:0.04em; margin-bottom:18px; display:flex; align-items:center; gap:10px}
-  .dot{width:7px;height:7px;border-radius:50%;background:var(--amber); animation:pulse 1.6s infinite}
-  @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.25}}
   .hero h1{font-size:clamp(2.4rem,6vw,4.4rem); line-height:1.04; max-width:760px}
   .hero h1 em{font-style:normal; color:var(--teal)}
   .hero p{color:var(--muted); font-size:1.1rem; max-width:520px; margin-top:22px}
@@ -60,12 +57,10 @@
   .btn-ghost{border-color:var(--line); color:var(--ink)}
   .btn-ghost:hover{border-color:var(--teal)}
 
-  /* section labels */
   .label{color:var(--muted); font-size:0.85rem; margin-bottom:10px}
   .sec-head{display:flex; align-items:baseline; justify-content:space-between; margin-bottom:40px; flex-wrap:wrap; gap:10px}
   .sec-head h2{font-size:clamp(1.6rem,3vw,2.2rem)}
 
-  /* Work — filmstrip */
   .work{background:var(--bg-alt); border-top:1px solid var(--line); border-bottom:1px solid var(--line)}
   .sprocket{height:14px; background-image:radial-gradient(circle,var(--bg) 3px,transparent 3.2px); background-size:26px 14px; background-repeat:repeat-x; opacity:0.5}
   .reel{display:flex; gap:18px; overflow-x:auto; padding-bottom:14px; scroll-snap-type:x proximity}
@@ -83,7 +78,6 @@
   .card-body h3{font-size:0.98rem; margin-bottom:4px}
   .card-body p{color:var(--muted); font-size:0.85rem}
 
-  /* About */
   .about-grid{display:grid; grid-template-columns:1.1fr 1fr; gap:56px}
   @media (max-width:760px){.about-grid{grid-template-columns:1fr}}
   .about p{color:var(--muted); font-size:1.02rem; max-width:480px}
@@ -92,7 +86,6 @@
   .tool-row{display:flex; justify-content:space-between; padding:14px 0; border-bottom:1px solid var(--line); font-size:0.95rem}
   .tool-row span:last-child{color:var(--muted)}
 
-  /* Services */
   .svc{border-top:1px solid var(--line)}
   .svc-row{display:grid; grid-template-columns:70px 1fr 1.3fr; gap:20px; padding:26px 0; border-bottom:1px solid var(--line); align-items:baseline}
   @media (max-width:640px){.svc-row{grid-template-columns:1fr; gap:6px}}
@@ -100,7 +93,6 @@
   .svc-row h3{font-size:1.1rem}
   .svc-row p{color:var(--muted); font-size:0.92rem}
 
-  /* Contact */
   .contact{background:var(--bg-alt); border-top:1px solid var(--line)}
   .contact h2{font-size:clamp(1.8rem,4vw,3rem); max-width:640px}
   .contact p{color:var(--muted); margin-top:16px; max-width:520px}
@@ -128,7 +120,6 @@
 
 <section class="hero">
   <div class="wrap">
-    <div class="tc"><span class="dot"></span><span class="mono" id="clock">00:00:00:00</span></div>
     <h1>I cut footage into stories that <em>hold attention.</em></h1>
     <p>Video editor working across YouTube long-form, Shorts and Reels — pacing, sound design and color that keep viewers watching to the end.</p>
     <div class="cta-row">
@@ -195,7 +186,7 @@
     <div class="links">
       <a class="link-chip" href="https://www.fiverr.com/s/emR0pDE" target="_blank" rel="noopener">Fiverr</a>
       <a class="link-chip" href="https://instagram.com/surajsetsky" target="_blank" rel="noopener">Instagram — @surajsetsky</a>
-      <a class="link-chip" href="https://youtube.com/@surajskyline" target="_blank" rel="noopener">YouTube — surajskyline</a>
+      <a class="link-chip" href="https://youtube.com/@suraj-skyline" target="_blank" rel="noopener">YouTube — suraj-skyline</a>
     </div>
   </div>
 </section>
@@ -207,9 +198,5 @@
   </div>
 </footer>
 
-<script>
-  let s=0;
-  setInterval(()=>{s++; const h=String(Math.floor(s/360000)).padStart(2,'0'); const m=String(Math.floor(s/6000)%60).padStart(2,'0'); const sec=String(Math.floor(s/100)%60).padStart(2,'0'); const f=String(s%100).padStart(2,'0'); document.getElementById('clock').textContent=`${h}:${m}:${sec}:${f}`;},10);
-</script>
 </body>
 </html>
